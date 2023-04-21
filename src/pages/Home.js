@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Marquee from 'react-fast-marquee'
 import BlogCard from '../components/BlogCard'
 import ProductCard from '../components/ProductCard';
+import SpecialProduct from '../components/SpecialProduct';
 
 const Home = () => {
   return (
@@ -204,6 +205,86 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className='famous-wrapper py-5 home-wrapper-2'>
+        <div className='container-xxl'>
+          <div className='row'>
+            <div className='col-3'>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-01.webp' alt='famous' className='img-fluid' />
+                <div className='famous-content position-absolute'>
+                  <h5>Pantalla Grande</h5>
+                  <h6>Smart Watch Serie 7</h6>
+                  <p>Desde $399 o $16.62 al mes durante 24 meses</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-3'>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-02.webp' alt='famous' className='img-fluid' />
+                <div className='famous-content position-absolute'>
+                  <h5 className='text-dark'>Laptops</h5>
+                  <h6 className='text-dark'>MacBook Pro Air</h6>
+                  <p className='text-dark'>Desde $999 o $56.62 al mes durante 24 meses</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-3'>
+              <div className='famous-card position-relative'>
+                <img src='/images/famous-03.webp' alt='famous' className='img-fluid' />
+                <div className='famous-content position-absolute'>
+                  <h5 className='text-dark'>Smartphones</h5>
+                  <h6 className='text-dark'>iPhone 13pro</h6>
+                  <p className='text-dark'>Ahora en Verde. Desde $799 o $41.62 al mes durante 24 meses</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-3'>
+                <div className='famous-card position-relative'>
+                  <img src='/images/famous-04.webp' alt='famous' className='img-fluid' />
+                  <div className='famous-content position-absolute'>
+                    <h5 className='text-dark'>Audio</h5>
+                    <h6 className='text-dark'>Parlantes bluetooth</h6>
+                    <p className='text-dark'>Elegi el color. Desde $199 o $9.62 al mes durante 24 meses</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='special-wrapper py-5 home-wrapper-2'>
+        <div className='container-xxl'>
+          <div className='row'>
+            <div className='col-12'>
+              <h3 className='section-heading'>PRODUCTOS ESPECIALES</h3>
+            </div>
+          </div>
+          <div className='row'>
+            <SpecialProduct />
+            <SpecialProduct />
+            <SpecialProduct />
+            <SpecialProduct />
+          </div>
+        </div>
+      </section>
+
+      <section className='popular-wrapper py-5 home-wrapper-2'>
+        <div className='container-xxl'>
+          <div className='row'>
+            <div className='col-12'>
+              <h3 className='section-heading'>PRODUCTOS POPULARES</h3>
+            </div>
+          </div>
+          <div className='row'>
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
+      </section>
+
       <section className='marquee-wrapper py-5'>
         <div className='container-xxl'>
           <div className='row'>
