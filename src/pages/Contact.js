@@ -1,6 +1,9 @@
-import React from 'react'
-import BreadCrumb from '../components/BreadCrumb'
-import Meta from '../components/Meta'
+import React from 'react';
+import BreadCrumb from '../components/BreadCrumb';
+import Meta from '../components/Meta';
+import { AiOutlineHome, AiOutlineMail } from 'react-icons/ai';
+import { BiPhoneCall } from 'react-icons/bi';
+import { BsInfoCircle } from 'react-icons/bs';
 
 const Contact = () => {
   return (
@@ -37,12 +40,35 @@ const Contact = () => {
                       <input type='tel' className='form-control' placeholder='Telefono' />
                     </div>
                     <div>
-                      <textarea name='' id='' className='w-100 form-control' cols="30" rows="10" placeholder='Comentarios'></textarea>
+                      <textarea name='' id='' className='w-100 form-control' cols="30" rows="4" placeholder='Comentarios'></textarea>
+                    </div>
+                    <div className=''>
+                      <button className='button border-0'>Enviar</button>
                     </div>
                   </form>
                 </div>
                 <div>
                   <h3 className='contact-title mb-4'>Encuentrenos</h3>
+                  <div>
+                    <ul className='ps-0'>
+                      <li className='mb-3 d-flex gap-15 align-items-center'>
+                        <AiOutlineHome className='fs-5' />
+                        <address className='mb-0'>Av. Pres. Figueroa Alcorta 7597, C1428 CABA</address>
+                      </li>
+                      <li className='mb-3 d-flex gap-15 align-items-center'>
+                        <BiPhoneCall className='fs-5' />
+                        <a href='tel: 0800-999-2505'>0800-999-2505</a>
+                      </li>
+                      <li className='mb-3 d-flex gap-15 align-items-center'>
+                        <AiOutlineMail className='fs-5' />
+                        <a href='mailto: felixdoura@gmail.com'>felixdoura@gmail.com</a>
+                      </li>
+                      <li className='mb-3 d-flex gap-15 align-items-center'>
+                        <BsInfoCircle className='fs-5' />
+                        <p className='mb-0'>Lunes a Viernes de 9 a 18</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
