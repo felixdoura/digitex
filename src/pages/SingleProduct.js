@@ -5,6 +5,8 @@ import ProductCard from '../components/ProductCard'
 import ReactStars from 'react-rating-stars-component'
 import ReactImageZoom from 'react-image-zoom';
 import Color from '../components/Color';
+import { TbGitCompare } from 'react-icons/tb';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 const SingleProduct = () => {
     const props = {
@@ -13,6 +15,15 @@ const SingleProduct = () => {
         zoomWidth: 600,
         img: "https://m.media-amazon.com/images/I/515BNisImJL._SL1000_.jpg"
     };
+    const copyToClipboard = (text) => {
+        console.log('text', text)
+        var textField = document.createElement('textarea')
+        textField.innerText = text
+        document.body.appendChild(textField)
+        textField.select()
+        document.execCommand('copy')
+        textField.remove()
+      }
 
     const [orderedProduct, setorderedProduct] = useState(true);
     return (
@@ -64,7 +75,7 @@ const SingleProduct = () => {
                                     </div>
                                     <a className='review-btn' href='#review'>Escriba una reseña</a>
                                 </div>
-                                <div className='border-bottom py-3'>
+                                <div className='py-3'>
                                     <div className='d-flex gap-10 align-items-center my-2'>
                                         <h3 className='product-heading'>Tipo :</h3>
                                         <p className='product-data'>Reloj</p>
@@ -119,6 +130,33 @@ const SingleProduct = () => {
                                                 Comprar
                                             </button>
                                         </div>
+                                    </div>
+                                    <div className='d-flex align-items-center gap-15'>
+                                        <div>
+                                            <a href=''>
+                                                <TbGitCompare className='fs-5 me-2' />
+                                                Comparar Producto
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href=''>
+                                                <AiOutlineHeart className='fs-5 me-2' />
+                                                Agregar a la Lista de Deseados
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className='d-flex gap-10 flex-column my-3'>
+                                        <h3 className='product-heading'>Envio y Devoluciones</h3>
+                                        <p className='product-data'>Envio gratuito y devolucones disponibles en todas las ordenes! <br />{" "} Hacemos envios en todo el pais de <b>5 a 10 dias habiles!</b></p>
+                                    </div>
+                                    <div className='d-flex gap-10 align-items-center my-3'>
+                                        <h3 className='product-heading'>Envio y Devoluciones</h3>
+                                        <a 
+                                            href="javascript:void(0);"
+                                            onClick={() => 
+                                                {copyToClipboard("https://m.media-amazon.com/images/I/515BNisImJL._SL1000_.jpg");
+                                            }}
+                                        >Copia del Link del Producto</a> 
                                     </div>
                                 </div>
                             </div>
