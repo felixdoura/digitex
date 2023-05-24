@@ -8,6 +8,7 @@ import Color from '../components/Color';
 import { TbGitCompare } from 'react-icons/tb';
 import { AiOutlineHeart } from 'react-icons/ai';
 import Container from '../components/Container'
+import { Link } from 'react-router-dom'
 
 const SingleProduct = () => {
     const props = {
@@ -26,7 +27,7 @@ const SingleProduct = () => {
         textField.remove()
     }
 
-    const [orderedProduct, setorderedProduct] = useState(true);
+    const [orderedProduct] = useState(true);
     return (
         <>
             <Meta title={"Nombre del Producto"} />
@@ -133,13 +134,13 @@ const SingleProduct = () => {
                                 </div>
                                 <div className='d-flex align-items-center gap-15'>
                                     <div>
-                                        <a href=''>
+                                        <a href='/'>
                                             <TbGitCompare className='fs-5 me-2' />
                                             Comparar Producto
                                         </a>
                                     </div>
                                     <div>
-                                        <a href=''>
+                                        <a href='/'>
                                             <AiOutlineHeart className='fs-5 me-2' />
                                             Agregar a la Lista de Deseados
                                         </a>
@@ -151,12 +152,12 @@ const SingleProduct = () => {
                                 </div>
                                 <div className='d-flex gap-10 align-items-center my-3'>
                                     <h3 className='product-heading'>Envio y Devoluciones</h3>
-                                    <a
-                                        href="javascript:void(0);"
+                                    <Link
+                                        href="/"
                                         onClick={() => {
                                             copyToClipboard("https://m.media-amazon.com/images/I/515BNisImJL._SL1000_.jpg");
                                         }}
-                                    >Copia del Link del Producto</a>
+                                    >Copia del Link del Producto</Link>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +198,7 @@ const SingleProduct = () => {
                                 </div>
                                 {orderedProduct && (
                                     <div>
-                                        <a className='text-dark text-decoration-underline' href=''>Escriba una Reseña</a>
+                                        <a className='text-dark text-decoration-underline' href='/'>Escriba una Reseña</a>
                                     </div>
                                 )}
                             </div>
